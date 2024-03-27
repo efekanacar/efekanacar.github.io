@@ -1,98 +1,119 @@
-Herkese selamlar bu blog yazımda güçlü bir korelasyon sistemi ve SIEM ürünü olan Cryptosim’i inceledim.İyi okumalar..
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazı Başlığı</title>
+</head>
+<body>
+    <header>
+        <h1>Yazı Başlığı</h1>
+        <p>Yazar: <em>Yazar Adı</em></p>
+        <p>Tarih: <time datetime="2024-03-22">22 Mart 2024</time></p>
+    </header>
+    <article>
+        <p>Herkese selamlar bu blog yazımda güçlü bir korelasyon sistemi ve SIEM ürünü olan Cryptosim’i inceledim.İyi okumalar..
 
-Cryptosim, CRYPTTECH tarafından geliştirilen bir güvenlik bilgi ve olay yönetimi (SIEM) ürünüdür. Gerçek zamanlı olarak logları toplayarak, davranış farklarını ve anormallikleri algılamak için güçlü bir bellekte (in-memory) korelasyon özelliği kullanır. Bu sayede, gelişmiş kalıcı tehditleri (APT) yakalayabilmektedir.
-
-Cryptosim, NoSQL yapısı ile yüksek performans değerlerine ulaşmaktadır. Kural ve makine öğrenmesi yöntemleriyle çalışan benzersiz korelasyon özellikleri ile tehditlerin algılanması için en stratejik ürünlerden biri haline gelmiştir.
-
-Cryptosim, aşağıdaki özellikleriyle işletmelerin siber güvenlik risklerini azaltmasına yardımcı olmaktadır:
-
-Gerçek zamanlı tehdit algılama: Cryptosim, logları gerçek zamanlı olarak toplayarak, yeni tehditleri hızla tespit edebilmektedir.
-Gelişmiş kalıcı tehdit algılama: Cryptosim, gelişmiş kalıcı tehditleri (APT) yakalayabilmektedir.
-Otomatik olay ilişkilendirme: Cryptosim, logları otomatik olarak ilişkilendirerek, daha kapsamlı bir tehdit analizi yapabilmektedir.
-Kural ve makine öğrenmesi: Cryptosim, kural ve makine öğrenmesi yöntemleriyle çalışan benzersiz korelasyon özellikleriyle, tehditleri daha doğru bir şekilde algılayabilmektedir.
-Cryptosim, bankacılık, enerji, sağlık hizmetleri, kamu, üretim gibi sektörlerde faaliyet gösteren işletmeler için uygun bir çözümdür:
-
-Cryptosim, Türkiye’de ve yurt dışında birçok büyük kurum tarafından kullanılmaktadır.
-
-Cryptosim’in temel özellikleri şunlardır:
-
-Gerçek zamanlı tehdit algılama
-Gelişmiş kalıcı tehdit algılama
-Otomatik olay ilişkilendirme
-Kural ve makine öğrenmesi
-Cryptosim’in faydaları şunlardır:
-
-İşletmelerin siber güvenlik risklerini azaltmasına yardımcı olur.
-Yeni tehditleri hızla tespit eder.
-Gelişmiş kalıcı tehditleri yakalar.
-Daha kapsamlı bir tehdit analizi sağlar.
-Tehditleri daha doğru bir şekilde algılar.
-Olay İlişkilendirme (Korelasyon)
-
-Korelasyon, farklı kaynaklardan gelen güvenlik olaylarının ilişkilendirilmesi ve anlamlandırılması sürecidir. Bu sayede, tek başına bir anlam ifade etmeyen olayların bile bir araya gelerek bir güvenlik tehdidini işaret edip etmediğini tespit etmek mümkün olur.
-
-Korelasyon işlemi, genellikle korelasyon kuralları kullanılarak gerçekleştirilir. Korelasyon kuralları, belirli bir olay gerçekleştiğinde başka bir olay gerçekleştiğinde alarm verilmesini sağlayan mantıksal ifadelerdir. Örneğin, bir kullanıcının normalde hiç kullanmadığı bir IP adresinden bir bağlantı kurması, bir güvenlik tehdidinin işareti olabilir. Bu durumda, bir korelasyon kuralı, bu tür bir bağlantı gerçekleştiğinde alarm verilmesini sağlayabilir.
-
-Korelasyon, SIEM ürünlerinin en önemli özelliklerinden biridir. Korelasyon sayesinde, güvenlik uzmanları, tek başına tespit edilmesi zor olan güvenlik tehditlerini daha kolay bir şekilde tespit edebilir ve bunlara karşı önlem alabilir.
-
-Göstergeler
-
-Burada İstatistik & Sistem ve Sınıflandırma olmak üzere 2 kısım yer alıyor.
-
-Sınıflandırma kısmında seviyeye göre, en fazla görülene göre, kritiklik sırasına göresınıflandırabiliriz. Kaynağa göre veya tarihe göre filtreleyebiliriz.
-
-
-İstatistik & Sistem kısmında olay sayı grafikleri yer alır. Ay/dakika/gün grafikleri mevcut. Disk ve CPU kullanımı; Log kaynağına göre dağılım, son 1 hafta toplam, son 6 ay toplam ve bugün saatlik grafikler yer alır.
-
-
-Hedef Ip Haritası kısmında En çok gidilen hedef Ip haritası yer alır.
-
-
-Log Aktiviteleri
-
-Cryptosim’in log verilerini görüntüleme ve analiz etme yeteneğine sahiptir. Cryptosim, çeşitli log formatlarını destekler ve logları hızlı ve kolay bir şekilde görüntülemenizi sağlar.
-
-Burada istediğimiz sorguları gerçekleştirebiliriz. Kaynak, Tarih aralığı, Maks. Satır Sayısı ve Şartları belirterek. Sorguları Default, tablo veya Elasticsearch-SQL olarak gerçekleştirebiliriz. Ayrıca Log istatistiklerini, Disk kullanımını ve Sistem durumunu da Log Aktiviteleri kısmından görebiliriz.
-
-
-Veri & Güvenlik Analitikleri
-
-Cryptosim, çeşitli analitik teknikleri kullanarak, işletmelerin siber güvenlik risklerini daha iyi anlamalarına yardımcı olur. Burada Analitik sorgular gerçekleştirebilirsiniz. İndeks üzerinde arama yapabilir veya kolona göre filtreleme yapabiliriz. Sınıflandırma Analitiği kısmında log türüne göre tablo oluşturabiliriz. Kolon Bazında analitik kısmında Kaynaklara kolon ekleyebilir ve sonuçları kaydedebilirsiniz. Kara liste analitik kısmında Kara listede bulunan kaynak Ip’lerin gittiği hedef Ip’ler ve Kara listede bulunan Ip’lere gitmiş kaynak Ip’ler yer alır.
-
-Uyarılar
-
-Cryptosim, çeşitli uyarı türleri sağlar ve işletmelerin tehditleri hızlı bir şekilde tespit etmelerine yardımcı olur. Burada uyarı, hata ve alarmları görebilirsiniz. uyarı tipi, uyarı mesajı ve tarihine göre listelenmiştir. Yeni uyarı oluşturabilirsiniz.
-
-Veri Kaynakları
-
-Veri Kaynakları, Cryptosim’in log verilerini aldığı kaynaklardır. Log kaynaklarının durumları ve pozisyonlarını Kaynaklar kısmında görebiliriz. Ajanlar kısmında Log kaynaklarının geldiği makine isimlerini, versiyonlarını ve sistemlerini görebiliriz.
-
-Siber Güvenlik
-
-Siber Güvenlik, Cryptosim’in siber güvenlik risklerini azaltmaya yönelik özelliklerinin genel adıdır. Cryptosim, gelişmiş kalıcı tehdit (APT) algılama, otomatik olay ilişkilendirme ve kural ve makine öğrenmesi gibi özelliklerle işletmelerin siber güvenlik risklerini azaltmasına yardımcı olur. Burada Tespit edilen olayları, geçmişe yönelik ilişkilendirme ve korelasyon kurallarını görebiliriz.
-
-Varlıklar
-
-Varlıklar, Cryptosim’in koruma altındaki sistemler ve verileridir. Cryptosim, varlıkların durumunu izlemenizi ve tehditlere karşı korumanızı sağlar.
-
-Raporlar
-
-Cryptosim, çeşitli rapor türleri sağlar. Burada yeni rapor oluşturabilir, indirebilir veya dışa aktarabiliriz.
-
-İnkar Edilemezlik
-
-Cryptosim, inkar edilemezlik sağlamak için çeşitli teknikler kullanır ve işletmelerin siber güvenlik olaylarını doğrulamasına yardımcı olur. Olayların hashlerini kontrol edebilirsiniz.
-
-Olaylar
-
-Cryptosim’in tespit ettiği güvenlik olaylarıdır.
-
-Dağıtık Servis Yönetimi
-
-Dağıtık servis yönetimi, birden fazla Cryptosim sunucusunu yönetmeye yarar. Yönetici ve işleyici ayarları ve logları burada tutulur. Sistem güncellemeleri de buradan yapılır.
-
-Kaynaklar:
-
-https://www.crypttech.com/tr/products/cryptosim/
-
-https://www.youtube.com/watch?v=uuihBjyDOaI
+            Cryptosim, CRYPTTECH tarafından geliştirilen bir güvenlik bilgi ve olay yönetimi (SIEM) ürünüdür. Gerçek zamanlı olarak logları toplayarak, davranış farklarını ve anormallikleri algılamak için güçlü bir bellekte (in-memory) korelasyon özelliği kullanır. Bu sayede, gelişmiş kalıcı tehditleri (APT) yakalayabilmektedir.
+            
+            Cryptosim, NoSQL yapısı ile yüksek performans değerlerine ulaşmaktadır. Kural ve makine öğrenmesi yöntemleriyle çalışan benzersiz korelasyon özellikleri ile tehditlerin algılanması için en stratejik ürünlerden biri haline gelmiştir.
+            
+            Cryptosim, aşağıdaki özellikleriyle işletmelerin siber güvenlik risklerini azaltmasına yardımcı olmaktadır:
+            
+            Gerçek zamanlı tehdit algılama: Cryptosim, logları gerçek zamanlı olarak toplayarak, yeni tehditleri hızla tespit edebilmektedir.
+            Gelişmiş kalıcı tehdit algılama: Cryptosim, gelişmiş kalıcı tehditleri (APT) yakalayabilmektedir.
+            Otomatik olay ilişkilendirme: Cryptosim, logları otomatik olarak ilişkilendirerek, daha kapsamlı bir tehdit analizi yapabilmektedir.
+            Kural ve makine öğrenmesi: Cryptosim, kural ve makine öğrenmesi yöntemleriyle çalışan benzersiz korelasyon özellikleriyle, tehditleri daha doğru bir şekilde algılayabilmektedir.
+            Cryptosim, bankacılık, enerji, sağlık hizmetleri, kamu, üretim gibi sektörlerde faaliyet gösteren işletmeler için uygun bir çözümdür:
+            
+            Cryptosim, Türkiye’de ve yurt dışında birçok büyük kurum tarafından kullanılmaktadır.
+            
+            Cryptosim’in temel özellikleri şunlardır:
+            
+            Gerçek zamanlı tehdit algılama
+            Gelişmiş kalıcı tehdit algılama
+            Otomatik olay ilişkilendirme
+            Kural ve makine öğrenmesi
+            Cryptosim’in faydaları şunlardır:
+            
+            İşletmelerin siber güvenlik risklerini azaltmasına yardımcı olur.
+            Yeni tehditleri hızla tespit eder.
+            Gelişmiş kalıcı tehditleri yakalar.
+            Daha kapsamlı bir tehdit analizi sağlar.
+            Tehditleri daha doğru bir şekilde algılar.
+            Olay İlişkilendirme (Korelasyon)
+            
+            Korelasyon, farklı kaynaklardan gelen güvenlik olaylarının ilişkilendirilmesi ve anlamlandırılması sürecidir. Bu sayede, tek başına bir anlam ifade etmeyen olayların bile bir araya gelerek bir güvenlik tehdidini işaret edip etmediğini tespit etmek mümkün olur.
+            
+            Korelasyon işlemi, genellikle korelasyon kuralları kullanılarak gerçekleştirilir. Korelasyon kuralları, belirli bir olay gerçekleştiğinde başka bir olay gerçekleştiğinde alarm verilmesini sağlayan mantıksal ifadelerdir. Örneğin, bir kullanıcının normalde hiç kullanmadığı bir IP adresinden bir bağlantı kurması, bir güvenlik tehdidinin işareti olabilir. Bu durumda, bir korelasyon kuralı, bu tür bir bağlantı gerçekleştiğinde alarm verilmesini sağlayabilir.
+            
+            Korelasyon, SIEM ürünlerinin en önemli özelliklerinden biridir. Korelasyon sayesinde, güvenlik uzmanları, tek başına tespit edilmesi zor olan güvenlik tehditlerini daha kolay bir şekilde tespit edebilir ve bunlara karşı önlem alabilir.
+            
+            Göstergeler
+            
+            Burada İstatistik & Sistem ve Sınıflandırma olmak üzere 2 kısım yer alıyor.
+            
+            Sınıflandırma kısmında seviyeye göre, en fazla görülene göre, kritiklik sırasına göresınıflandırabiliriz. Kaynağa göre veya tarihe göre filtreleyebiliriz.
+            
+            
+            İstatistik & Sistem kısmında olay sayı grafikleri yer alır. Ay/dakika/gün grafikleri mevcut. Disk ve CPU kullanımı; Log kaynağına göre dağılım, son 1 hafta toplam, son 6 ay toplam ve bugün saatlik grafikler yer alır.
+            
+            
+            Hedef Ip Haritası kısmında En çok gidilen hedef Ip haritası yer alır.
+            
+            
+            Log Aktiviteleri
+            
+            Cryptosim’in log verilerini görüntüleme ve analiz etme yeteneğine sahiptir. Cryptosim, çeşitli log formatlarını destekler ve logları hızlı ve kolay bir şekilde görüntülemenizi sağlar.
+            
+            Burada istediğimiz sorguları gerçekleştirebiliriz. Kaynak, Tarih aralığı, Maks. Satır Sayısı ve Şartları belirterek. Sorguları Default, tablo veya Elasticsearch-SQL olarak gerçekleştirebiliriz. Ayrıca Log istatistiklerini, Disk kullanımını ve Sistem durumunu da Log Aktiviteleri kısmından görebiliriz.
+            
+            
+            Veri & Güvenlik Analitikleri
+            
+            Cryptosim, çeşitli analitik teknikleri kullanarak, işletmelerin siber güvenlik risklerini daha iyi anlamalarına yardımcı olur. Burada Analitik sorgular gerçekleştirebilirsiniz. İndeks üzerinde arama yapabilir veya kolona göre filtreleme yapabiliriz. Sınıflandırma Analitiği kısmında log türüne göre tablo oluşturabiliriz. Kolon Bazında analitik kısmında Kaynaklara kolon ekleyebilir ve sonuçları kaydedebilirsiniz. Kara liste analitik kısmında Kara listede bulunan kaynak Ip’lerin gittiği hedef Ip’ler ve Kara listede bulunan Ip’lere gitmiş kaynak Ip’ler yer alır.
+            
+            Uyarılar
+            
+            Cryptosim, çeşitli uyarı türleri sağlar ve işletmelerin tehditleri hızlı bir şekilde tespit etmelerine yardımcı olur. Burada uyarı, hata ve alarmları görebilirsiniz. uyarı tipi, uyarı mesajı ve tarihine göre listelenmiştir. Yeni uyarı oluşturabilirsiniz.
+            
+            Veri Kaynakları
+            
+            Veri Kaynakları, Cryptosim’in log verilerini aldığı kaynaklardır. Log kaynaklarının durumları ve pozisyonlarını Kaynaklar kısmında görebiliriz. Ajanlar kısmında Log kaynaklarının geldiği makine isimlerini, versiyonlarını ve sistemlerini görebiliriz.
+            
+            Siber Güvenlik
+            
+            Siber Güvenlik, Cryptosim’in siber güvenlik risklerini azaltmaya yönelik özelliklerinin genel adıdır. Cryptosim, gelişmiş kalıcı tehdit (APT) algılama, otomatik olay ilişkilendirme ve kural ve makine öğrenmesi gibi özelliklerle işletmelerin siber güvenlik risklerini azaltmasına yardımcı olur. Burada Tespit edilen olayları, geçmişe yönelik ilişkilendirme ve korelasyon kurallarını görebiliriz.
+            
+            Varlıklar
+            
+            Varlıklar, Cryptosim’in koruma altındaki sistemler ve verileridir. Cryptosim, varlıkların durumunu izlemenizi ve tehditlere karşı korumanızı sağlar.
+            
+            Raporlar
+            
+            Cryptosim, çeşitli rapor türleri sağlar. Burada yeni rapor oluşturabilir, indirebilir veya dışa aktarabiliriz.
+            
+            İnkar Edilemezlik
+            
+            Cryptosim, inkar edilemezlik sağlamak için çeşitli teknikler kullanır ve işletmelerin siber güvenlik olaylarını doğrulamasına yardımcı olur. Olayların hashlerini kontrol edebilirsiniz.
+            
+            Olaylar
+            
+            Cryptosim’in tespit ettiği güvenlik olaylarıdır.
+            
+            Dağıtık Servis Yönetimi
+            
+            Dağıtık servis yönetimi, birden fazla Cryptosim sunucusunu yönetmeye yarar. Yönetici ve işleyici ayarları ve logları burada tutulur. Sistem güncellemeleri de buradan yapılır.
+            
+            Kaynaklar:
+            
+            https://www.crypttech.com/tr/products/cryptosim/
+            
+            https://www.youtube.com/watch?v=uuihBjyDOaI</p>
+  
+    </article>
+    <footer>
+        <p>&copy; 2024 Yazı Sahibi</p>
+    </footer>
+</body>
+</html>
