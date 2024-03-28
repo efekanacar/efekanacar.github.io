@@ -1,23 +1,23 @@
 [
   {
       "title": "Active Directory",
-      "url": "Cyber.Security/active directory.pdf"
+      "url": "cybersec/active directory.pdf"
   },
   {
       "title": "Registry",
-      "url": "Cyber.Security/registry.pdf"
+      "url": "cybersec/registry.pdf"
   },
   {
     "title": "Google Dork",
-    "url": "Cyber.Security/google dork.pdf"
+    "url": "cybersec/google dork.pdf"
   },
   {
     "title": "Nessus",
-    "url": "Cyber.Security/NESSUS.pdf"
+    "url": "cybersec/NESSUS.pdf"
   },
   {
     "title": "Shodan",
-    "url": "Cyber.Security/shodan.pdf"
+    "url": "cybersec/shodan.pdf"
   }
 
 ]
