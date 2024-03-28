@@ -1,128 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimpleBlog - Julia Walker's Personal Blog</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleBlog - Julia Walker's Personal Blog</title>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body class="light-theme">
 
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <nav class="navbar">
-        <a href="#">
-          <img src="./assets/images/logo-light.svg" alt="SimpleBlog logo" width="150" class="logo-light">
-          <img src="./assets/images/logo-dark.svg" alt="SimpleBlog logo" width="150" class="logo-dark">
-        </a>
-        <div class="btn-group">
-          <button class="theme-btn theme-btn-mobile light">
-            <ion-icon name="moon" class="moon"></ion-icon>
-            <ion-icon name="sunny" class="sun"></ion-icon>
-          </button>
-          <button class="nav-menu-btn">
-            <ion-icon name="menu-outline"></ion-icon>
-          </button>
-        </div>
-        <div class="flex-wrapper">
-          <ul class="desktop-nav">
-            <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">About Me</a></li>
-            <li><a href="#" class="nav-link">Contact</a></li>
-          </ul>
-          <button class="theme-btn theme-btn-desktop light">
-            <ion-icon name="moon" class="moon"></ion-icon>
-            <ion-icon name="sunny" class="sun"></ion-icon>
-          </button>
-        </div>
-        <div class="mobile-nav">
-          <!-- Mobile navigation content here -->
-        </div>
-      </nav>
-    </div>
-  </header>
+    <!-- Header -->
+    <!-- Your header content here -->
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <div class="hero">
-      <!-- Hero section content here -->
-    </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <!-- Your hero section content here -->
 
-    <div class="main">
-      <div class="container">
+        <!-- Blog Section -->
         <div class="blog">
-          <h2 class="h2">Latest Blog Post</h2>
-          <div class="blog-card-group">
-            <!-- Post 1: Active Directory -->
-            <div class="blog-card">
-              <div class="blog-content-wrapper">
-                <button class="blog-topic text-tiny">Active Directory</button>
-                <h3><a href="./posts/active_directory.pdf" class="h3" target="_blank">Active Directory Explained</a></h3>
-                <p class="blog-text">Learn all about Active Directory and its role in network management.</p>
-              </div>
+            <h2 class="h2">Latest Blog Post</h2>
+            <div class="blog-card-group" id="blog-card-group">
+                <!-- Blog cards will be dynamically added here -->
             </div>
-            <!-- Post 2: Google Dork -->
-            <div class="blog-card">
-              <div class="blog-content-wrapper">
-                <button class="blog-topic text-tiny">Google Dork</button>
-                <h3><a href="./posts/google_dork.pdf" class="h3" target="_blank">Mastering Google Dorking Techniques</a></h3>
-                <p class="blog-text">Discover advanced Google Dorking techniques for efficient information retrieval.</p>
-              </div>
-            </div>
-            <!-- Post 3: Nessus -->
-            <div class="blog-card">
-              <div class="blog-content-wrapper">
-                <button class="blog-topic text-tiny">Nessus</button>
-                <h3><a href="./posts/nessus.pdf" class="h3" target="_blank">Getting Started with Nessus Vulnerability Scanner</a></h3>
-                <p class="blog-text">A beginner's guide to using Nessus for vulnerability scanning.</p>
-              </div>
-            </div>
-            <!-- Post 4: Registry -->
-            <div class="blog-card">
-              <div class="blog-content-wrapper">
-                <button class="blog-topic text-tiny">Registry</button>
-                <h3><a href="./posts/registry.pdf" class="h3" target="_blank">Understanding Windows Registry</a></h3>
-                <p class="blog-text">Explore the Windows Registry and its importance in system configuration.</p>
-              </div>
-            </div>
-            <!-- Post 5: Shodan -->
-            <div class="blog-card">
-              <div class="blog-content-wrapper">
-                <button class="blog-topic text-tiny">Shodan</button>
-                <h3><a href="./posts/shodan.pdf" class="h3" target="_blank">Introduction to Shodan Search Engine</a></h3>
-                <p class="blog-text">An introductory guide to using Shodan for network reconnaissance.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Load More Button -->
-          <button class="btn load-more">Load More</button>
+            <button class="btn load-more">Load More</button>
         </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <!-- Footer content here -->
-  </footer>
+    <!-- Footer -->
+    <!-- Your footer content here -->
 
-  <!-- Custom JavaScript -->
-  <script src="./assets/js/script.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Function to fetch PDF files from the 'posts' directory
+        function fetchPDFs() {
+            const postTopics = ["active directory", "google dork", "NESSUS", "registry", "shodan"];
+            const blogCardGroup = document.getElementById('blog-card-group');
 
-  <!-- Ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            postTopics.forEach(topic => {
+                fetch(`./posts/${topic}.pdf`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        const objectURL = URL.createObjectURL(blob);
+                        const blogCard = `
+                            <div class="blog-card">
+                                <div class="blog-card-banner">
+                                    <object data="${objectURL}" type="application/pdf" width="250" height="200">
+                                        <p>Alternative text for the PDF</p>
+                                    </object>
+                                </div>
+                                <div class="blog-content-wrapper">
+                                    <button class="blog-topic text-tiny">${topic}</button>
+                                    <h3><a href="${objectURL}" class="h3" target="_blank">${topic} PDF</a></h3>
+                                    <p class="blog-text">Description of the ${topic} PDF.</p>
+                                    <div class="wrapper-flex">
+                                        <div class="profile-wrapper">
+                                            <img src="./assets/images/author.png" alt="Julia Walker" width="50">
+                                        </div>
+                                        <div class="wrapper">
+                                            <a href="#" class="h4">Julia Walker</a>
+                                            <p class="text-sm">
+                                                <time datetime="2024-03-23">Mar 23, 2024</time>
+                                                <span class="separator"></span>
+                                                <ion-icon name="time-outline"></ion-icon>
+                                                <time datetime="PT3M">3 min</time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        blogCardGroup.insertAdjacentHTML('beforeend', blogCard);
+                    })
+                    .catch(error => console.error('Error fetching PDF:', error));
+            });
+        }
+
+        // Call the fetchPDFs function when the page loads
+        window.addEventListener('load', fetchPDFs);
+    </script>
 </body>
-
 </html>
