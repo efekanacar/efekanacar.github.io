@@ -1,10 +1,23 @@
 [
   {
-      "title": "İlk Yazı",
-      "url": "posts/ilk-yazi.html"
+      "title": "Active Directory",
+      "url": "Cyber.Security/active directory.pdf"
   },
   {
-      "title": "İkinci Yazı",
-      "url": "posts/registry.pdf"
+      "title": "Registry",
+      "url": "Cyber.Security/registry.pdf"
+  },
+  {
+    "title": "Google Dork",
+    "url": "Cyber.Security/google dork.pdf"
+  },
+  {
+    "title": "Nessus",
+    "url": "Cyber.Security/NESSUS.pdf"
+  },
+  {
+    "title": "Shodan",
+    "url": "Cyber.Security/shodan.pdf"
   }
+
 ]
