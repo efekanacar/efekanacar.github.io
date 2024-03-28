@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body class="light-theme">
 
     <!-- Header -->
@@ -32,57 +34,13 @@
     <!-- Footer -->
     <!-- Your footer content here -->
 
+    <!-- LinkedIn Button -->
+    <a href="https://www.linkedin.com/in/efekan-acar-1218911b4/" target="_blank" class="linkedin-btn">
+        <img src="./assets/images/linkedin-icon.png" alt="LinkedIn Icon" width="30" height="30">
+    </a>
+
     <!-- Custom JavaScript -->
-    <script>
-        // Function to fetch PDF files from the 'posts' directory
-        function fetchPDFs() {
-            const postTopics = ["active directory", "google dork", "NESSUS", "registry", "shodan"];
-            const blogCardGroup = document.getElementById('blog-card-group');
-
-            postTopics.forEach(topic => {
-                fetch(`./posts/${topic}.pdf`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.blob();
-                    })
-                    .then(blob => {
-                        const objectURL = URL.createObjectURL(blob);
-                        const blogCard = `
-                            <div class="blog-card">
-                                <div class="blog-card-banner">
-                                    <object data="${objectURL}" type="application/pdf" width="250" height="200">
-                                        <p>Alternative text for the PDF</p>
-                                    </object>
-                                </div>
-                                <div class="blog-content-wrapper">
-                                    <button class="blog-topic text-tiny">${topic}</button>
-                                    <h3><a href="${objectURL}" class="h3" target="_blank">${topic} PDF</a></h3>
-                                    <p class="blog-text">Description of the ${topic} PDF.</p>
-                                    <div class="wrapper-flex">
-                                        <div class="profile-wrapper">
-                                        </div>
-                                        <div class="wrapper">
-                                            <a href="#" class="h4">Efekan ACAR</a>
-                                            <p class="text-sm">
-                                                <span class="separator"></span>
-                                                <ion-icon name="time-outline"></ion-icon>
-                                                <time datetime="PT3M">3 min</time>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        blogCardGroup.insertAdjacentHTML('beforeend', blogCard);
-                    })
-                    .catch(error => console.error('Error fetching PDF:', error));
-            });
-        }
-
-        // Call the fetchPDFs function when the page loads
-        window.addEventListener('load', fetchPDFs);
-    </script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
